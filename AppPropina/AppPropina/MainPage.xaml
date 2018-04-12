@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:AppPropina"
              x:Class="AppPropina.MainPage">
 
-    <TableView Intent="Form">
+    <TableView Intent="Form" HasUnevenRows="True">
         <TableSection Title="Datos Generales">
             <EntryCell x:Name="entTotal"
                        Label="Total"
@@ -26,12 +26,39 @@
         </TableSection>
         <TableSection Title="Calcular">
             <ViewCell>
-                <ViewCell.View>
+                <ViewCell.View >
                     <StackLayout>
-                        <Button x:Name="btnCalcular" Text="Calcular"></Button>
+                        <Button x:Name="btnCalcular" 
+                                Text="Calcular">
+                            
+                        </Button>
+                        <Image Source="icon.png" 
+                               Scale=".8"></Image>
                     </StackLayout>
                 </ViewCell.View>
             </ViewCell>
+        </TableSection>
+        <TableSection Title="Resultado">
+            <TextCell x:Name="txtTotalPropina"
+                      Text="Propina"
+                      Detail="0.0">
+                
+            </TextCell>
+            <TextCell x:Name="txtTotal"
+                      Text="Total"
+                      Detail="0.0">
+
+            </TextCell>
+            <TextCell x:Name="txtTotalPropinaPersona"
+                      Text="Propina por persona"
+                      Detail="0.0">
+
+            </TextCell>
+            <TextCell x:Name="txtTotalPersona"
+                      Text="Total por persona"
+                      Detail="0.0">
+
+            </TextCell>
         </TableSection>
     </TableView>
 
