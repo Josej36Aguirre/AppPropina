@@ -20,7 +20,7 @@ namespace AppPropina
             var total = decimal.Parse(entTotal.Text);
             var propina = int.Parse(entPropina.Text);
             var numPersonas = int.Parse(entPersonas.Text);
-            var totalPropina = (total * (propina / 100));
+            var totalPropina = ((total * propina)/100);
             txtTotalPropina.Detail =totalPropina.ToString("C");
 
             txtTotalPropinaPersona.Detail = (totalPropina / numPersonas).ToString("C");
