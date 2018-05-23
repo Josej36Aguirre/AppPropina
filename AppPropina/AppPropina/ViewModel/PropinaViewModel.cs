@@ -25,12 +25,13 @@ namespace AppPropina.ViewModel
         private void Calcular(object obj)
         {
 
-    
 
+            PropinaModel.PropinaTotal = (PropinaModel.Total * PropinaModel.PorcentajePropina) / 100;
+            PropinaModel.TotalCuenta = PropinaModel.Total + PropinaModel.PropinaTotal;
             PropinaModel.PropinaPorPersona = PropinaModel.PropinaTotal / PropinaModel.Personas;
             PropinaModel.TotalPersonas = PropinaModel.Total / PropinaModel.Personas;
-            PropinaModel.PropinaTotal = (PropinaModel.Total * PropinaModel.PorcentajePropina) / 100;
-            PropinaModel.TotalCuenta = PropinaModel.Total + PropinaModel.Total;
+            
+           
 
           
         }

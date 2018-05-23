@@ -7,13 +7,14 @@ using Xamarin.Forms;
 
 namespace AppPropina
 {
+    using View;
 	public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new AppPropina.MainPage();
+			MainPage = new AppPropina.View.MainPage();
 		}
 
 		protected override void OnStart ()

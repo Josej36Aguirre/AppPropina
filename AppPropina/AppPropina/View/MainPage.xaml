@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppPropina.ViewModel"
+              xmlns:conver="clr-namespace:AppPropina.Converters"
              x:Class="AppPropina.View.MainPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:PropinaviewModel x:Key="propVM"></local:PropinaviewModel>
+            <local:PropinaViewModel x:Key="propVM"/>
+            <conver:DecimalConverter x:Key="conver"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -25,14 +27,14 @@
             <EntryCell x:Name="entPropina"
                        Label="Propina"
                        Placeholder="%"
-                       Text="{Binding propinaModel.Total, Model=TwoWay}">
+                       Text="{Binding PropinaModel.Total, Model=TwoWay}">
                 
             </EntryCell>
             
             <EntryCell x:Name="entPersonas"
                        Label="Total"
                        Placeholder="Ingresar personas"
-                       Text="{Binding propinaModel.TotalPersonas, Model=TwoWay}">
+                       Text="{Binding PropinaModel.TotalPersonas, Model=TwoWay}">
                 
             </EntryCell>
         </TableSection>
@@ -53,26 +55,26 @@
         </TableSection>
         <TableSection Title="Resultado">
             <TextCell x:Name="txtTotalPropina"
-                     Text="{Binding propinaViewModel.propinaTotal}"
-                      Detail="0.0">
+                     Detail="{Binding PropinaModel.propinaTotal, Converter={StaticResource conver}}"
+                     Text="Propina Total">
                 
             </TextCell>
             <TextCell x:Name="txtTotal"
                       
-                      Detail="0.0"
-                      Text="{Binding  propinaViewModel.Total}">
+                     Text ="Total"
+                      Detail="{Binding  PropinaModel.Total, Converter={StaticResource conver}}">
 
             </TextCell>
             <TextCell x:Name="txtTotalPropinaPersona"
-                     Text="{Binding  propinaViewModel.propinaPorPersona}" 
-                      Detail="0.0"
+                     Detail="{Binding  PropinaModel.propinaPorPersona, Converter={StaticResource conver}}" 
+                      Text="Total Propina por persona"
                       >
 
             </TextCell>
             <TextCell x:Name="txtTotalPersona"
                      
-                      Detail="0.0"
-                     Text="{Binding  propinaViewModel.TotalPersonas}"  >
+                      Text="Total por persona"
+                     Detail="{Binding  PropinaModel.TotalPersonas, Converter={StaticResource conver}}"  >
 
             </TextCell>
         </TableSection>

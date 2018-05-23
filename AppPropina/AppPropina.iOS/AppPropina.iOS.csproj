@@ -118,14 +118,16 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\AppPropina\AppPropina.csproj">
       <Project>{457F8E64-CB81-4E4E-A5D5-A343221AA9AF}</Project>
       <Name>AppPropina</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.5.1.527436</Version>
+    </PackageReference>
   </ItemGroup>
 </Project>
