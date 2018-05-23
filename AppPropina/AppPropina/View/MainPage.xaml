@@ -8,7 +8,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:PropinaViewModel x:Key="propVM"/>
-            <conver:DecimalConverter x:Key="conver"/>
+            <conver:DecimalConverter x:Key="convers"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -55,18 +55,18 @@
         </TableSection>
         <TableSection Title="Resultado">
             <TextCell x:Name="txtTotalPropina"
-                     Detail="{Binding PropinaModel.propinaTotal, Converter={StaticResource conver}}"
+                     Detail="{Binding PropinaModel.propinaTotal, Converter={StaticResource convers}}"
                      Text="Propina Total">
                 
             </TextCell>
             <TextCell x:Name="txtTotal"
                       
                      Text ="Total"
-                      Detail="{Binding  PropinaModel.Total, Converter={StaticResource conver}}">
+                      Detail="{Binding  PropinaModel.Total, Converter={StaticResource convers}}">
 
             </TextCell>
             <TextCell x:Name="txtTotalPropinaPersona"
-                     Detail="{Binding  PropinaModel.propinaPorPersona, Converter={StaticResource conver}}" 
+                     Detail="{Binding  PropinaModel.propinaPorPersona, Converter={StaticResource convers}}" 
                       Text="Total Propina por persona"
                       >
 
@@ -74,7 +74,7 @@
             <TextCell x:Name="txtTotalPersona"
                      
                       Text="Total por persona"
-                     Detail="{Binding  PropinaModel.TotalPersonas, Converter={StaticResource conver}}"  >
+                     Detail="{Binding  PropinaModel.TotalPersonas, Converter={StaticResource convers}}"  >
 
             </TextCell>
         </TableSection>
